@@ -1,0 +1,14 @@
+@use "./_variables" as variables;
+
+.layout-main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: var(--content-padding);
+    transition: margin-left variables.$transitionDuration;
+}
+
+.layout-main {
+    flex: 1 1 auto;
+}

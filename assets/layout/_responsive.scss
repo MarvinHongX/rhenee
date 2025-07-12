@@ -1,0 +1,41 @@
+@use "./_variables" as variables;
+
+
+@media screen and (min-width: 1450px) {
+    .layout-topbar {
+        width: 1280px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .layout-footer {
+        width: 1280px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }   
+    // .layout-main {
+    //     width: 1280px;
+    //     margin-left: auto !important;
+    //     margin-right: auto !important;
+    // }
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        padding-top: var(--topbar-height2);
+    }
+}
+
+@media (max-width: 991px) {
+    .layout-wrapper {
+        .layout-topbar-container {
+            padding: 0 0.8rem;
+        }
+        // .layout-main-container {
+        //     padding: 0 0.8rem;
+        // }
+        .layout-footer-container {
+            padding: 0 0.8rem;
+        }
+    }
+}
