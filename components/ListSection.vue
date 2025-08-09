@@ -8,8 +8,11 @@ const props = defineProps({
     },
 });
 
+const { mapImagePath } = useImageMapper();
+
 const itemList = ref([]);
 const itemsPerPage = 8;
+const isMounted = ref(false);
 
 const {
     currentPage,
@@ -19,14 +22,37 @@ const {
 } = usePagination(itemsPerPage, itemList, 1);
 
 onMounted(async () => {
+    await loadItems();
+    isMounted.value = true;
+});
+
+const loadItems = async (page = 1) => {
     const items = await props.itemService.getItems();
+    if (items.error) return;
+
+    await filterItems(items);
+    goToPage(page);
+};
+
+const filterItems = async (items) => {
+    let filtered = items.filter(item => item.useFg === 'Y');
+
+    filtered.sort((a, b) => {
+        const numA = parseInt(a.sortNo.replace(/\D/g, ''), 10) || 0;
+        const numB = parseInt(b.sortNo.replace(/\D/g, ''), 10) || 0;
+        return numA - numB;
+    });
     
-    if (items.error) {
-        return;
+    for (const item of filtered) {
+        if (Array.isArray(item.images)) {
+        item.images = await Promise.all(
+            item.images.map(img => mapImagePath(img))
+        );
+        }
     }
 
-    itemList.value = [...items].sort((a, b) => a.id - b.id);
-});
+  itemList.value = filtered;
+};
 </script>
 
 <template>

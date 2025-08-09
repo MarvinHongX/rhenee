@@ -1,35 +1,45 @@
 {
     "data": [
         {
+            "useFg": "Y",
             "id": "0001",
+            "sortNo": "0001",
             "name": "Woman MC Association Korea",
             "images": [
                 "/layout/images/work/0001/1.webp"
             ]
         },
         {
+            "useFg": "Y",
             "id": "0002",
+            "sortNo": "0002",
             "name": "TOTAL SHIFT",
             "images": [
                 "/layout/images/work/0002/1.webp"
             ]
         },
         {
+            "useFg": "Y",
             "id": "0003",
+            "sortNo": "0003",
             "name": "B2BX",
             "images": [
                 "/layout/images/work/0003/1.webp"
             ]
         },
         {
+            "useFg": "Y",
             "id": "0004",
+            "sortNo": "0004",
             "name": "ALEO CAT",
             "images": [
                 "/layout/images/work/0004/1.webp"
             ]
         },
         {
+            "useFg": "Y",
             "id": "0005",
+            "sortNo": "0005",
             "name": "BTC PAW",
             "images": [
                 "/layout/images/work/0005/1.webp"

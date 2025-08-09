@@ -1,14 +1,9 @@
+import logoUrl from '/assets/images/logo.webp';
+import errorUrl from '/assets/images/error.webp';
+
 export const useImg = () => {
-    const logoUrl = computed(() => {
-        return `/layout/images/logo.webp`;
-    });
-
-    const errorUrl = computed(() => {
-        return `/layout/images/error.webp`;
-    });
-
     return {
         logoUrl,
-        errorUrl
+        errorUrl,
     };
 };
