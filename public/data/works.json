@@ -44,6 +44,15 @@
             "images": [
                 "/layout/images/work/0005/1.webp"
             ]
+        },
+        {
+            "useFg": "Y",
+            "id": "0006",
+            "sortNo": "0006",
+            "name": "Kingsmoney Landing Page",
+            "images": [
+                "/layout/images/work/0006/1.webp"
+            ]
         }
     ]
 }

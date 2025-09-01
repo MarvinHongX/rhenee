@@ -4,4 +4,5 @@
 <template>
     <AboutSection />
     <SummarySection />
+    <AdSection />
 </template>
